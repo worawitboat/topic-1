@@ -5,6 +5,8 @@ import { AuthGuard } from './shared/guards';
 import { HomeComponent } from './home/home.component';
 import { ReadComponent } from './read/read.component';
 import { ReadDetailComponent} from './read-detail/read-detail.component';
+import { CreatemangaComponent } from './createmanga/createmanga.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -13,11 +15,15 @@ const routes: Routes = [
   },
   {
     path: 'read',
-    component: ReadComponent
+    component: ReadComponent,
   },  
   {
     path: 'read-detail',
     component: ReadDetailComponent
+  },
+  {
+    path: 'createmanga',
+    component: CreatemangaComponent
   },
   {
     path: 'auth',
