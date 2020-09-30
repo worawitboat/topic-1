@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { ReadComponent } from './read/read.component';
 import { ReadDetailComponent} from './read-detail/read-detail.component';
 import { CreatemangaComponent } from './createmanga/createmanga.component';
+import { MapComponent } from './map/map.component';
+import { ChooseTypeComponent } from './choose-type/choose-type.component';
 
 const routes: Routes = [
   {
@@ -14,15 +16,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'read',
-    component: ReadComponent,
-  },  
-  {
-    path: 'read-detail',
+    path: 'map',
     component: ReadDetailComponent
   },
   {
-    path: 'createmanga',
+    path: 'choose-type',
     component: CreatemangaComponent
   },
   {

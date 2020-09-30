@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReadComponent } from './read.component';
+import { ChooseTypeComponent } from './choose-type.component';
 
-describe('ReadComponent', () => {
-  let component: ReadComponent;
-  let fixture: ComponentFixture<ReadComponent>;
+describe('ChooseTypeComponent', () => {
+  let component: ChooseTypeComponent;
+  let fixture: ComponentFixture<ChooseTypeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReadComponent ]
+      declarations: [ ChooseTypeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReadComponent);
+    fixture = TestBed.createComponent(ChooseTypeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
