@@ -1,7 +1,8 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { AgmCoreModue } from '@agm/core';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
@@ -12,9 +13,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './shared/services';
-import { ReadComponent } from './read/read.component';
-import { ReadDetailComponent } from './read-detail/read-detail.component';
-import { CreatemangaComponent } from './createmanga/createmanga.component';
 import { MapComponent } from './map/map.component';
 import { ChooseTypeComponent } from './choose-type/choose-type.component';
 
@@ -23,8 +21,12 @@ export function appInitializerFactory(authService: AuthService) {
 }
 
 @NgModule({
-  imports: [BrowserAnimationsModule, HttpClientModule, SharedModule, AppRoutingModule],
-  declarations: [AppComponent, HeaderComponent, HomeComponent, ReadComponent, ReadDetailComponent, CreatemangaComponent, MapComponent, ChooseTypeComponent],
+  imports: [BrowserModule,BrowserAnimationsModule, HttpClientModule, SharedModule, AppRoutingModule,
+     AgmCoreModule.forRoot({
+       apiKey: 'AIzaSyBJWuQmrf6UgrkGbMJF6-m1GwTZrazBFBo'
+     })
+  ],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, MapComponent, ChooseTypeComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
